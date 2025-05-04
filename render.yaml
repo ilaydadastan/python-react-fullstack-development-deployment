@@ -22,3 +22,6 @@ services:
       paths:
         - frontend/**
     autoDeploy: true
+    envVars:
+      - key: VITE_REACT_APP_URL
+        value: https://react-frontend-hl44.onrender.com
