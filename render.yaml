@@ -29,4 +29,4 @@ services:
       - key: VITE_REACT_APP_URL
         value: https://react-frontend-hl44.onrender.com
       - key: VITE_APP_API_URL
-        value: https://flask-backend-cmeg.onrender.com/api
+        value: https://flask-backend-g4e0.onrender.com/api
