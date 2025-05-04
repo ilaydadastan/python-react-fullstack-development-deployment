@@ -10,7 +10,10 @@ interface CreateCampaignModalProps {
 }
 
 const CreateCampaignModal: React.FC<CreateCampaignModalProps> = ({closeModal, onCreateCampaign}) => {
-    const [campaignData, setCampaignData] = useState<Campaign>({isRunning: false, payouts: [{country: Country.Estonia} as Payout]} as Campaign);
+    const [campaignData, setCampaignData] = useState<Campaign>({
+        isRunning: false,
+        payouts: [{country: Country.Estonia} as Payout]
+    } as Campaign);
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>, index?: number): void => {
         const {name, value} = e.currentTarget;

@@ -1,7 +1,7 @@
 from marshmallow import validates, ValidationError, fields
 from marshmallow.fields import List, URL
 
-from app.initialization import ma  # ma: Flask-Marshmallow instance
+from app.initialization import ma
 from app.api.schemas.payout import PayoutSchema
 
 class CampaignSchema(ma.Schema):

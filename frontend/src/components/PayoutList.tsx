@@ -7,7 +7,6 @@ const PayoutList = ({payouts}: { payouts: Payout[] }) => {
     const showMore = payouts.length > 3;
     const [showPayoutModal, setShowPayoutModal] = useState(false);
 
-
     return (
         <div className="border rounded p-2 mt-3">
             <h6 className="mb-2">Payouts:</h6>
