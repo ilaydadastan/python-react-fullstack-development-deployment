@@ -1,6 +1,7 @@
 from flask import json
 
-BASE_URL = "/api/campaigns/"
+BASE_URL = "/api/campaigns"
+
 
 def test_get_campaigns_empty(client):
     # when
@@ -32,6 +33,7 @@ def test_get_campaigns_with_data(client, app):
     assert len(data) == 1
     assert data[0]['title'] == "Test Campaign"
 
+
 def test_get_campaign_by_id_with_data(client, app):
     # given
     from app.models.campaign import Campaign
@@ -47,12 +49,13 @@ def test_get_campaign_by_id_with_data(client, app):
         new_campaign_id = campaign.id
 
     # when
-    response = client.get(BASE_URL + str(new_campaign_id))
+    response = client.get(BASE_URL + "/" + str(new_campaign_id))
     data = response.get_json()
 
     # then
     assert response.status_code == 200
     assert data['title'] == "Test Campaign"
+
 
 def test_update_campaign_running_status_by_id(client, app):
     # given
@@ -70,12 +73,14 @@ def test_update_campaign_running_status_by_id(client, app):
     payload = False
 
     # when
-    response = client.put(BASE_URL + str(new_campaign_id) + "/running", data=json.dumps(payload), content_type='application/json')
+    response = client.put(BASE_URL + "/" + str(new_campaign_id) + "/running", data=json.dumps(payload),
+                          content_type='application/json')
     data = response.get_json()
 
     # then
     assert response.status_code == 200
     assert data == "OK"
+
 
 def test_create_campaign_success(client):
     # given
@@ -99,6 +104,7 @@ def test_create_campaign_success(client):
     assert data['isRunning'] == True
     assert len(data['payouts']) == 1
     assert data['payouts'][0]['country'] == "TR"
+
 
 def test_create_campaign_missing_fields(client):
     # given

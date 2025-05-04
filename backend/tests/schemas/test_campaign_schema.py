@@ -2,6 +2,7 @@ from app.api.schemas.campaign import CampaignSchema
 import pytest
 from marshmallow import ValidationError
 
+
 def test_campaign_schema_valid_data():
     # given
     schema = CampaignSchema()
@@ -19,6 +20,7 @@ def test_campaign_schema_valid_data():
 
     # then no err
     assert result["title"] == "Sample Campaign"
+
 
 def test_campaign_schema_invalid_url():
     # given
@@ -38,6 +40,7 @@ def test_campaign_schema_invalid_url():
     # then
     assert "landingPageUrl" in exc_info.value.messages
     assert exc_info.value.messages["landingPageUrl"] == ["Invalid URL."]
+
 
 def test_campaign_schema_empty_payouts():
     # given

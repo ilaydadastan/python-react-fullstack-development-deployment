@@ -2,6 +2,7 @@ from app.api.schemas.payout import PayoutSchema
 import pytest
 from marshmallow import ValidationError
 
+
 def test_payout_schema_missing_amount():
     # given
     schema = PayoutSchema()

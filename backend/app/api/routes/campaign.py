@@ -36,7 +36,7 @@ def get_campaigns():
 
 @campaign_bp.route('/<int:campaign_id>', methods=['GET'])
 def get_campaign(campaign_id):
-    campaign = Campaign.query.get(campaign_id)
+    campaign = db.session.get(Campaign, campaign_id)
     campaign_schema = CampaignSchema(many=False)
     return campaign_schema.dump(campaign)
 
@@ -48,7 +48,7 @@ def update_campaign_running(campaign_id):
     if not isinstance(is_running, bool):
         return {"error": "Expected boolean true or false in request body"}, 400
 
-    campaign = Campaign.query.get(campaign_id)
+    campaign = db.session.get(Campaign, campaign_id)
     if not campaign:
         return {"error": "Campaign not found"}, 404
 
