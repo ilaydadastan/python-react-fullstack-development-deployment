@@ -1,6 +1,9 @@
+import os
+
 from app import create_app
 from config import config_by_profile_name
 
+profile_name = os.getenv("ACTIVE_PROFILE", "development")
 app = create_app()
 
 if __name__ == '__main__':
