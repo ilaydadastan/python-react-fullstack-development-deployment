@@ -10,6 +10,9 @@ services:
       paths:
         - backend/**
     autoDeploy: true
+    envVars:
+      - key: ACTIVE_PROFILE
+        value: production
 
   - type: web
     name: react-frontend
