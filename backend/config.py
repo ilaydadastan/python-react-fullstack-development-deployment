@@ -9,7 +9,7 @@ class DevelopmentConfig:
 
 class ProductionConfig:
     SQLALCHEMY_DATABASE_URI = os.getenv("DATABASE_URI", "sqlite:///prod.db")
-    ALLOWED_ORIGINS = ["http://localhost:8080"]
+    ALLOWED_ORIGINS = ["https://react-frontend-hl44.onrender.com/"]
     DEBUG = False
 
 
