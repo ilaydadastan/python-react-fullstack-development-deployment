@@ -12,7 +12,7 @@ This full-stack application is designed to manage marketing campaigns. The key f
 
 # How it works?
 You can watch the quick demo!
-
+https://github.com/ilaydadastan/adcash-campaign-management/blob/main/adcash-campaign-management-demo-video.mp4
 
 ## Technologies Used
 ### Backend
