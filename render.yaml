@@ -2,6 +2,7 @@ services:
   - type: web
     name: flask-backend
     env: docker
+    rootDir: backend
     repo: https://github.com/ilaydadastan/adcash-campaign-management
     branch: main
     dockerfilePath: backend/Dockerfile
@@ -13,6 +14,7 @@ services:
   - type: web
     name: react-frontend
     env: docker
+    rootDir: frontend
     repo: https://github.com/ilaydadastan/adcash-campaign-management
     branch: main
     dockerfilePath: frontend/Dockerfile
