@@ -25,3 +25,5 @@ services:
     envVars:
       - key: VITE_REACT_APP_URL
         value: https://react-frontend-hl44.onrender.com
+      - key: VITE_APP_API_URL
+        value: https://flask-backend-cmeg.onrender.com
