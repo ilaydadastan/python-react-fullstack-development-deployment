@@ -5,7 +5,7 @@ services:
     rootDir: backend
     repo: https://github.com/ilaydadastan/adcash-campaign-management
     branch: main
-    dockerfilePath: backend/Dockerfile
+    dockerfilePath: Dockerfile
     buildFilter:
       paths:
         - backend/**
@@ -17,7 +17,7 @@ services:
     rootDir: frontend
     repo: https://github.com/ilaydadastan/adcash-campaign-management
     branch: main
-    dockerfilePath: frontend/Dockerfile
+    dockerfilePath: Dockerfile
     buildFilter:
       paths:
         - frontend/**
