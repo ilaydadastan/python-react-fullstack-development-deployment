@@ -15,6 +15,7 @@ Jinja2==3.1.6
 Mako==1.3.10
 MarkupSafe==3.0.2
 marshmallow==3.19.0
+marshmallow-sqlalchemy==0.28.0
 migrate==0.3.8
 packaging==25.0
 pluggy==1.5.0
