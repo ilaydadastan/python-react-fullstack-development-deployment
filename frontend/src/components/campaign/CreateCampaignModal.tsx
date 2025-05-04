@@ -72,7 +72,6 @@ const CreateCampaignModal: React.FC<CreateCampaignModalProps> = ({closeModal, on
         e.preventDefault();
         try {
             const createdCampaign = await createCampaign(campaignData);
-            console.log('Created Campaign:', createdCampaign);
             onCreateCampaign(createdCampaign);
             closeModal();
         } catch (error) {

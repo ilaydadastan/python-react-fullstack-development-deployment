@@ -28,7 +28,6 @@ const PayoutList = ({payouts}: { payouts: Payout[] }) => {
                 </>
             )}
             <PayoutModal payouts={sorted} show={showPayoutModal} onClose={() => setShowPayoutModal(false)}/>
-
         </div>
     );
 };

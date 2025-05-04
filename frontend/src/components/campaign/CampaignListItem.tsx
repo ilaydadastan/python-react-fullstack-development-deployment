@@ -45,7 +45,7 @@ const CampaignListItem = ({campaign}: { campaign: Campaign }) => {
                             onChange={toggleRunning}
                         />
                         <span className={`badge ${campaignData.isRunning ? 'bg-success' : 'bg-secondary'}`}>
-                            {campaignData.isRunning ? 'Running' : 'Paused'}
+                            {campaignData.isRunning ? 'Running' : 'Stopped'}
                         </span>
                     </div>
                 </div>

@@ -48,8 +48,6 @@ const Filter = ({onSearch, onIsRunningFilter}: FilterProps) => {
                 }
             </select>
         </div>
-
-
     );
 
 };

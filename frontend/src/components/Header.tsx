@@ -20,7 +20,6 @@ const Header = ({onSearch, onIsRunningFilter, onCreateCampaign}: HeaderProps) =>
             </div>
         </div>
     )
-
 };
 
 export default Header;

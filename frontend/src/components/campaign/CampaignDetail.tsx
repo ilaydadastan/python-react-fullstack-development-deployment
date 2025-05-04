@@ -70,7 +70,6 @@ const CampaignDetail = () => {
                 </div>
             </div>
 
-
         );
 };
 
