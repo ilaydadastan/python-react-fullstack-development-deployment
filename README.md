@@ -75,6 +75,47 @@ The React frontend communicates with the Flask backend API and provides the user
     ```
     http://localhost:5001/api
     ```
+Endpoints
+
+`GET` `/campaigns`
+
+Returns a list of campaigns. Optional query parameters:
+
+- search: Searches in title or URL
+
+- isRunning: Filters by running status (true / false).
+
+`GET` `/campaigns/<campaign_id>`
+Returns a single campaign by its ID.
+
+`PUT` `/campaigns/<campaign_id>/running`
+Updates the is_running status of a campaign.
+
+- Body: JSON boolean (true or false)
+
+`POST` `/campaigns`
+Creates a new campaign.
+
+- Body: JSON object with the following fields:
+
+```json
+{
+  "title": "Example Campaign",
+  "url": "https://example.com",
+  "is_running": true,
+  "payouts": [
+    {
+      "amount": 10.5,
+      "country": "US"
+    },
+    {
+      "amount": 8.0,
+      "country": "UK"
+    }
+  ]
+}
+```
+
 The Flask backend handles API requests and connects to the SQLite database.
 
 
