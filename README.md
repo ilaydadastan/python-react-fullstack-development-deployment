@@ -10,6 +10,9 @@ This full-stack application is designed to manage marketing campaigns. The key f
 - **Show Campaign Details**: Show campaign detail page by campaign id
 - **Search and Filter**: Search campaigns by title and landing page url and filter by campaign running status in the campaign list page.
 
+# How it works?
+You can watch the quick demo!
+https://github.com/ilaydadastan/adcash-campaign-management/blob/main/adcash-campaign-management-demo-video.mp4
 
 ## Technologies Used
 ### Backend
@@ -39,8 +42,8 @@ This full-stack application is designed to manage marketing campaigns. The key f
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/ilaydadastan/python-react-fullstack-development-deployment.git
-    cd python-react-fullstack-development-deployment
+    git clone https://github.com/ilaydadastan/adcash-campaign-management.git
+    cd adcash-campaign-management
     ```
 
 2. Start the Docker containers:
